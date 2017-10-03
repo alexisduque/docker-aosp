@@ -4,6 +4,7 @@ services:
   aosp:
     image: kylemanna/aosp:latest
     volumes:
-      - ~/aosp/ccache:/tmp/ccache
-      - ~/aosp:/aosp
+      - $PWD/ccache:/tmp/ccache
+      - $PWD:/aosp
       - ~/.gitconfig:/root/.gitconfig
+      - ~/.ssh:/root/.ssh
