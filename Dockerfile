@@ -14,5 +14,5 @@ RUN apt-get update && apt-get install -y  software-properties-common
 RUN add-apt-repository ppa:openjdk-r/ppa && apt-get update
 RUN apt-get install -y openjdk-7-jdk && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
-RUN export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"
-RUN export PATH="$JAVA_HOME/bin:$PATH"
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
+ENV PATH $JAVA_HOME/bin:$PATH

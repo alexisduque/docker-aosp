@@ -2,9 +2,9 @@ version: "2"
 
 services:
   aosp:
-    image: kylemanna/aosp:latest
+    image: alexisduque/aosp:latest
     volumes:
       - $PWD/ccache:/tmp/ccache
       - $PWD:/aosp
       - ~/.gitconfig:/root/.gitconfig
-      - ~/.ssh:/root/.ssh
+      - ~/.ssh:/home/aosp/.ssh
