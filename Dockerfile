@@ -15,4 +15,4 @@ RUN add-apt-repository ppa:openjdk-r/ppa && apt-get update
 RUN apt-get install -y openjdk-7-jdk && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
-ENV PATH $JAVA_HOME/bin:$PATH
+run echo "PATH=\"${JAVA_HOME}/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games\"" > /etc/environment
